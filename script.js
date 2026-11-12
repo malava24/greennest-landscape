@@ -2,6 +2,9 @@ const form = document.getElementById("quote-form");
 const statusEl = document.getElementById("form-status");
 const submitBtn = form.querySelector("button[type='submit']");
 
+// Shown when sending fails (e.g. the demo form is switched off). No technical details on purpose.
+const DEMO_OFF_MESSAGE = "This demo form is currently switched off. Please contact the developer directly.";
+
 function showStatus(text, type) {
   statusEl.textContent = text;
   statusEl.className = "form-status " + type;
@@ -100,10 +103,10 @@ form.addEventListener("submit", async (event) => {
       showStatus("Thank you, we’ll contact you within 24 hours", "success");
       form.reset();
     } else {
-      showStatus("Sorry, something went wrong on our side. Please try again in a few minutes.", "error");
+      showStatus(DEMO_OFF_MESSAGE, "error");
     }
   } catch (err) {
-    showStatus("Could not send your request. Please check your internet connection and try again.", "error");
+    showStatus(DEMO_OFF_MESSAGE, "error");
   } finally {
     submitBtn.disabled = false;
   }

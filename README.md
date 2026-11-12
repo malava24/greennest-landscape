@@ -93,3 +93,22 @@ The limits are defined in three places, so change them together:
 
 - Validation and the honeypot run in the browser, so they stop casual spam and typos but are not a full security solution. Formspree provides additional server-side filtering; enable its reCAPTCHA option if spam becomes a problem.
 - All names, reviews and projects are fictional placeholders.
+
+## Demo notice
+
+This website was built as a **portfolio example**. It is not a real business.
+
+The contact form is **switched off on the Formspree side** to avoid spam, so submissions are not delivered. Visitors who try to send the form see: "This demo form is currently switched off. Please contact the developer directly." A note under the form explains the same.
+
+### How to switch the form back on
+
+1. Log in to your Formspree account and re-enable the form (or create a new form and copy its endpoint URL).
+2. The form address is set in one place only: `index.html`, line 92, in the `action` attribute of the `<form>` tag:
+
+   ```html
+   <form id="quote-form" class="form" action="https://formspree.io/f/mnpdqbyb" method="POST" novalidate>
+   ```
+
+   If you created a new form, replace the URL there. `script.js` reads it automatically.
+3. Remove the demo note under the form in `index.html` (the `<p class="demo-note">` line) and, if you like, adjust the error text `DEMO_OFF_MESSAGE` at the top of `script.js`.
+4. Send a test request and check that the email arrives.
