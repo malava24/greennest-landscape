@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GreenNest Landscape Design</title>
+  <meta name="description" content="GreenNest Landscape Design — custom garden and outdoor space design.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="nav">
+      <span class="logo">GreenNest</span>
+    </nav>
+    <div class="hero-content">
+      <h1>Outdoor spaces you'll never want to leave</h1>
+      <p>Custom landscape design, planting and care for homes and businesses.</p>
+      <a class="btn" href="#contact">Get a free quote</a>
+    </div>
+  </header>
+
+  <section class="section" id="services">
+    <h2>Our services</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Garden Design</h3>
+        <p>Custom plans for front yards, backyards and patios, tailored to your style and budget.</p>
+      </article>
+      <article class="card">
+        <h3>Planting &amp; Installation</h3>
+        <p>Trees, shrubs, flower beds and lawns planted by our crew and built to last.</p>
+      </article>
+      <article class="card">
+        <h3>Hardscaping</h3>
+        <p>Walkways, retaining walls, patios and fire pits that blend with your landscape.</p>
+      </article>
+      <article class="card">
+        <h3>Seasonal Maintenance</h3>
+        <p>Regular pruning, mulching and cleanup so your yard looks great all year.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <h2>Recent projects</h2>
+    <div class="grid grid-work">
+      <figure class="project">
+        <div class="placeholder" role="img" aria-label="Photo placeholder: backyard patio project">Photo coming soon</div>
+        <figcaption>
+          <h3>Modern Backyard Patio</h3>
+          <p>Stone patio, fire pit and low-maintenance planting for a family backyard.</p>
+        </figcaption>
+      </figure>
+      <figure class="project">
+        <div class="placeholder" role="img" aria-label="Photo placeholder: front yard garden project">Photo coming soon</div>
+        <figcaption>
+          <h3>Cottage Front Garden</h3>
+          <p>Flower beds, a gravel path and native perennials that bloom from spring to fall.</p>
+        </figcaption>
+      </figure>
+      <figure class="project">
+        <div class="placeholder" role="img" aria-label="Photo placeholder: hillside retaining wall project">Photo coming soon</div>
+        <figcaption>
+          <h3>Hillside Retaining Wall</h3>
+          <p>Terraced retaining wall that turned a steep slope into usable garden space.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <h2>What our clients say</h2>
+    <div class="grid">
+      <blockquote class="card review">
+        <p>"They turned our bare backyard into the best part of our house. On time and on budget."</p>
+        <footer>— Sarah M., Austin, TX</footer>
+      </blockquote>
+      <blockquote class="card review">
+        <p>"Professional, friendly and very creative. Our neighbors keep asking who did the work."</p>
+        <footer>— David R., Portland, OR</footer>
+      </blockquote>
+      <blockquote class="card review">
+        <p>"The seasonal maintenance plan saves us hours every month. Highly recommend GreenNest."</p>
+        <footer>— Emily T., Denver, CO</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Request a free quote</h2>
+    <form id="quote-form" class="form" action="https://formspree.io/f/mnpdqbyb" method="POST" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" maxlength="60" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 123-4567" maxlength="20" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" maxlength="100" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" maxlength="1000" required></textarea>
+        <p id="message-counter" class="counter">0 / 1000</p>
+      </div>
+      <!-- Honeypot: hidden from people, bots fill it in. Formspree also ignores submissions where "_gotcha" is filled. -->
+      <div class="hp" aria-hidden="true">
+        <label for="website">Leave this field empty</label>
+        <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="btn btn-solid">Send request</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
